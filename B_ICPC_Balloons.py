@@ -1,10 +1,13 @@
-a=int(input())
-for i in range(a):
+t=int(input())
+for i in range(t):
     b=int(input())
-    s=input()
-    m=set(s)
-    num1=(len(s)-len(m))*1
-    num2=len(m)*2  
-    print(num1+num2)
-        
-    
+    pro=input()
+    fir=set()
+    counter=0
+    for i in pro:
+        if i in fir:
+            counter+=(1)
+        else:
+            counter+=2
+            fir.add(i)
+    print(counter)

@@ -1,16 +1,15 @@
 t=int(input())
 for i in range(t):
-    a,b=map(int,input().split())
+    c,b=map(int,input().split())
     num=list(map(int,input().split()))
-    num1=min(num)
-    num2=max(num)
-    if(num1<b and num2>b):
-        if((num2-b)>(b-num1)):
-            print(2*(b-num1)+(num2-b))
+    great=max(num)
+    small=min(num)
+    if(small<b and b<great):
+        if((b-small)<=(great-b)):
+            print(2*(b-small)+(great-b))
         else:
-             print(2*(num2-b)+(b-num1))
-            
-    elif(b>=num2):
-        print(b-num1)
+            print(2*(great-b)+(b-small))
+    elif(b>=great):
+        print(b-small)
     else:
-        print(num2-b)
+        print(great-b)
