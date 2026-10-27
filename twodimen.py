@@ -1,0 +1,23 @@
+target=int(input())
+nums=list(map(int,input().split()))
+left=0
+right=0
+add=0
+long=0
+data=[]
+while(left<len(nums) and right<len(nums)):
+    add+=nums[right]
+    long+=1
+    if(add>=target):
+        add=0
+        left+=1
+        right=left
+        data.append(long)
+        long=0
+    else:
+        right+=1
+if(len(data)!=0):
+    b=min(data)
+    print(b)
+else:
+    print(0)

@@ -1,0 +1,19 @@
+a=int(input())
+data=list(map(int,input().split()))
+data.sort()
+b=int(input())
+for i in range(b):
+    count=0
+    num=int(input())
+    c=len(data)-1
+    left=0
+    right=c
+    res=0
+    while(left<=right):
+        mid=(right+left)//2
+        if(data[mid]<=num):
+            res=mid+1
+            left=mid+1
+        else:
+            right=mid-1
+    print(res)   
