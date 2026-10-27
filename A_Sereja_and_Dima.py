@@ -1,0 +1,22 @@
+a=int(input())
+lst=list(map(int,input().split()))
+left=0
+right=len(lst)-1
+num1=0
+num2=0
+while(left<=right):
+    if(lst[left]<lst[right]):
+        num1+=lst[right]
+        right-=1
+    else:
+        num1+=lst[left]
+        left+=1
+    if(left<=right):
+        if(lst[left]<lst[right]):
+            num2+=lst[right]
+            right-=1
+        else:
+            num2+=lst[left]
+            left+=1
+print(num1,num2)
+   
