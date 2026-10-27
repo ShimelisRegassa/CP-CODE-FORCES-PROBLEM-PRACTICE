@@ -1,0 +1,16 @@
+a=int(input())
+data=list(map(int,input().split()))
+right=len(data)-2
+left=1
+sum1=data[0]
+sum2=data[right+1]
+while(left<right):
+    if(sum1<sum2):
+        sum1+=data[left]
+        left+=1 
+    elif(sum1>sum2):
+        sum2+=data[right]
+        right-=1
+    else:
+        print(left)
+        break

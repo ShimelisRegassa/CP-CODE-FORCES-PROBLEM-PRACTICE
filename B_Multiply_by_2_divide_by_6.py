@@ -1,0 +1,20 @@
+t=int(input())
+for i in range(t):
+    b=int(input())
+    v=3
+    long=0
+    while(b%3==0):
+        long+=1
+        b//=3
+    num=0
+    while(b%2==0):
+        num+=1
+        b//=2
+    if(b!=1):
+       print(-1)
+    else:
+        if(num<=long):
+            diff=long-num
+            print(((long+long)//2+diff))
+        else:
+            print(-1)
