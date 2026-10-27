@@ -1,17 +1,16 @@
 n=int(input())
-s=input()
-ch=set(s)
-num={}
+data=input()
+counter=float("inf")
+count={}
 right=0
 left=0
-counter=float("inf")
-while(right<n):
-    num[s[right]]=num.get(s[right],0)+1
-    while(len(num)==len(ch)):
+while(right<len(data)):
+    count[data[right]]=count.get(data[right],0)+1
+    while(len(count)==len(set(data))):
+        count[data[left]]-=1
         counter=min(counter,right-left+1)
-        num[s[left]]-=1
-        if(num[s[left]]==0):
-            del num[s[left]]
+        if(count[data[left]]==0):
+            del count[data[left]]
         left+=1
     right+=1
 print(counter)

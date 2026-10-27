@@ -1,26 +1,28 @@
 n=int(input())
-num=list(map(int,input().split()))
-data=sorted(num)
-k=int(input())
-num1=[0]*len(num)
-num1[0]=num[0]
-data1=[0]*len(num)
-data1[0]=data[0]
-for j in range(1,len(num)):
-    num1[j]=num1[j-1]+num[j]
-    data1[j]=data1[j-1]+data[j]
-for j in range(k):
-    a,b,c=map(int,input().split())
-    b,c=b-1,c-1
-    if(a==1):
-        if(b!=0):
-            print(num1[c]-num1[b-1])
+data=list(map(int,input().split()))
+m=int(input())
+num=sorted(data)
+arra1=[0]*len(data)
+arra2=[0]*len(data)
+val1=0
+val2=0
+for i in range(len(data)):
+    val1+=data[i]
+    val2+=num[i]
+    arra1[i]=val1
+    arra2[i]=val2    
+for i in range(m):
+    t,l,r=map(int,input().split())
+    if(t==1):
+        if(l==1):
+            print(arra1[r-1])
         else:
-            print(num1[c])
+            print(arra1[r-1]-arra1[l-2])
     else:
-        if(b!=0):
-            print(data1[c]-data1[b-1])
+        if(l==1):
+            print(arra2[r-1])
         else:
-            print(data1[c])
-            
+            print(arra2[r-1]-arra2[l-2])
+    
+    
     

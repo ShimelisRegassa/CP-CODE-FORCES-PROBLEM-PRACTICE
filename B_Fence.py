@@ -1,13 +1,20 @@
-a,b=map(int,input().split())
-num=list(map(int,input().split()))
-res=sum(num[:b])
-check=res
-counter=0
-for i in range(b,a):
-    res+=num[i]
-    res-=num[i-b]
-    if(res<check):
-        check=res
-        counter=i-b+1
-print(counter+1)
+n,t=map(int,input().split())
+data=list(map(int,input().split()))
+index=0
+left=0
+right=t
+value=sum(data[:t])
+current=value
+while(right<len(data) and left<len(data)-t+1):
+    current+=data[right]
+    current-=data[left]
+    right+=1
+    left+=1
+    if(current<value):
+        index=left
+        value=current
+print(index+1)
+    
+    
+    
 

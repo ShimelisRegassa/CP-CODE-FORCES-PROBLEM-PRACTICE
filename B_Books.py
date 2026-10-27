@@ -1,17 +1,19 @@
-a,b=map(int,input().split())
-num=list(map(int,input().split()))
-left=0
+n,t=map(int,input().split())
+data=list(map(int,input().split()))
 right=0
-val1=0
-counter1=0
-while(right<a and left<=right):
-    val1+=num[right]
-    while(val1>b):
-        val1-=num[left]
+left=0
+value=0
+counter=0
+while(right<len(data) ):
+    value+=data[right]
+    while(value>t and left<len(data)):
+        value-=data[left]
         left+=1
-    counter1=max(counter1,right-left+1)
+    counter=max(counter,right-left+1)
     right+=1
-print(counter1)
-   
+print(counter)
+
+    
+    
         
         
