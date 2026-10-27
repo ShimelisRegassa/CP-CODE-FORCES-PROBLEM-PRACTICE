@@ -1,15 +1,18 @@
-a=int(input())
-data=list(map(int,input().split()))
-data.sort(reverse=True)
-total=sum(data)
-count=0
-summation=0
-for i in range(len(data)):
-    summation+=data[i]
-    if(summation>total-summation):
-        count+=1
+n=int(input())
+num=list(map(int,input().split()))
+num.sort()
+counter=0
+val=0
+total=sum(num)
+for i in range(n-1,-1,-1):
+    val+=num[i]
+    counter+=1
+    if(val>total-val):
+        print(counter)
         break
-    else:
-        count+=1
-print(count)
+
+
+    
+    
+    
     

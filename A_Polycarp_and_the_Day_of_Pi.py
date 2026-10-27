@@ -1,3 +1,7 @@
-import math
-math.mp.dps = 50 
-print(math.pi)
+from mpmath import mp
+
+# Set the decimal places (dps) precision to 30
+mp.dps = 30
+
+# Print pi
+print(+mp.pi)
