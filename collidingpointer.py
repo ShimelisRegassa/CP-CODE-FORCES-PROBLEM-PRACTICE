@@ -1,0 +1,13 @@
+a=int(input())
+data=list(map(int,input().split()))
+tar=int(input())
+right=len(data)-1
+left=0
+while(left<right):
+    if(data[left]+data[right]<tar):
+        left+=1
+    elif(data[left]+data[right]>tar):
+        right-=1 
+    else:
+        print([left,right])
+        break
