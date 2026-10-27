@@ -1,0 +1,11 @@
+a=input()
+b=input()
+c=input()
+num=a+b
+count=0
+fir=sorted(num)
+sec=sorted(c)
+if(fir==sec):
+    print("YES")
+else:
+    print("NO")
