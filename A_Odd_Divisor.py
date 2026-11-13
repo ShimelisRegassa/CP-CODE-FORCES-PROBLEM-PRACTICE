@@ -1,15 +1,20 @@
-t=int(input())
-for i in  range(t):
-    b=int(input())
-    if(b%2==1):
+a=int(input())
+for i in range(a):
+    num=int(input())
+    if( num%2==1):
         print("YES")
     else:
-        num=b//2
-        while(num>=3):
-            if(num%2==1):
+        c=num//2
+        while(c>1):
+            if(c%2==1):
                 print("YES")
                 break
-            num/=2
-        if(num<3):
+            c=c//2
+        if(c==1 ):
             print("NO")
-       
+                
+            
+                
+                
+            
+    
